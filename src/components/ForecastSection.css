@@ -1,0 +1,239 @@
+/* Forecast Section Styles */
+.forecast-section {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hourly-forecast-wrapper,
+.daily-forecast-wrapper {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.forecast-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title-icon {
+  color: var(--sky-400);
+}
+
+.forecast-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.forecast-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-surface-elevated);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Hourly Track (Horizontal Scroll) */
+.hourly-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.hourly-node {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  min-width: 80px;
+  transition: all var(--transition-fast);
+}
+
+.hourly-node:hover {
+  border-color: var(--sky-500);
+  transform: translateY(-2px);
+}
+
+.hourly-time {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.hourly-icon {
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 2px 6px rgba(14, 165, 233, 0.3));
+}
+
+.hourly-temp {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hourly-pop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--sky-400);
+  font-weight: 600;
+}
+
+/* 5-Day Grid */
+.daily-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.card-glass-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+[data-theme='light'] .card-glass-subtle {
+  background: rgba(248, 250, 252, 0.7);
+  border-color: rgba(203, 213, 225, 0.7);
+}
+
+.daily-card {
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.daily-card:hover {
+  border-color: var(--sky-500);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.15);
+}
+
+.daily-day-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.daily-day-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.daily-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.daily-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.daily-weather-icon {
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.3));
+}
+
+.daily-cond-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.daily-temp-range {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.daily-high {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--rose-400);
+}
+
+.daily-low {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sky-400);
+}
+
+.daily-meta-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.daily-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-surface-elevated);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 992px) {
+  .daily-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .daily-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-card {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .daily-icon-box {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .daily-weather-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

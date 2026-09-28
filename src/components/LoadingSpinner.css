@@ -1,0 +1,125 @@
+/* Loading Spinner Styles */
+.spinner-container-card {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.radar-orbit-box {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-ring-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed rgba(56, 189, 248, 0.35);
+  animation: spinSlow 14s linear infinite;
+}
+
+.radar-ring-mid {
+  position: absolute;
+  inset: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+}
+
+.radar-scanner {
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(56, 189, 248, 0.25) 90deg, transparent 95deg);
+  animation: spinSlow 2.5s linear infinite;
+}
+
+.spinner-core-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky-400);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.pulsing-cloud {
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+.spinner-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spinner-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.radar-live-icon {
+  color: var(--sky-400);
+  animation: pulseGlow 1s infinite alternate;
+}
+
+.spinner-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.spinner-status-msg {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0;
+  min-height: 1.4rem;
+  transition: opacity 0.2s;
+}
+
+.spinner-progress-track {
+  width: 100%;
+  max-width: 280px;
+  height: 4px;
+  background: var(--bg-surface-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.spinner-indeterminate-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 45%;
+  background: linear-gradient(90deg, var(--sky-500), var(--indigo-500));
+  border-radius: var(--radius-full);
+  animation: indeterminateSlide 1.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes indeterminateSlide {
+  0% {
+    left: -45%;
+  }
+  100% {
+    left: 100%;
+  }
+}

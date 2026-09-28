@@ -1,0 +1,142 @@
+/* Error State Styles */
+.error-container-card {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  border-color: rgba(244, 63, 94, 0.35);
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.12);
+  animation: slideUp 0.3s ease-out;
+}
+
+.error-icon-box {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-full);
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: var(--rose-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.error-message {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 500px;
+}
+
+.failed-query-tag {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.failed-query-tag code {
+  color: var(--rose-400);
+  background: var(--bg-surface-elevated);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+}
+
+.error-suggestions-box {
+  width: 100%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.suggestion-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.suggestion-list {
+  padding-left: 1.25rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.suggestion-list li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.error-actions-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.retry-btn {
+  padding: 0.75rem 1.75rem;
+}
+
+.quick-fallback-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fallback-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.fallback-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.fallback-city-btn {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.fallback-city-btn:hover {
+  border-color: var(--sky-500);
+  color: var(--sky-400);
+}
